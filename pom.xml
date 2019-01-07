@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sjw</groupId>
+    <artifactId>1.0.0</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--<packaging>war</packaging>-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.BUILD-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <hutool.version>4.1.12</hutool.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.43</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-poi</artifactId>
+            <version>${hutool.version}</version>
+
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+            <version>${hutool.version}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-json</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-core</artifactId>
+            <version>0.7.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>2.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+
+        <finalName>Baseball</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+
+            </snapshots>
+        </repository>
+
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

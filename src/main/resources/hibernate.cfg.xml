@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>-->
+        <!-- 鏈�澶ц繛鎺ユ暟 -->
+        <property name="hibernate.c3p0.max_size">50</property>
+        <!-- 鏈�灏忚繛鎺ユ暟 -->
+        <property name="hibernate.c3p0.min_size">10</property>
+        <!-- 鑾峰緱杩炴帴鐨勮秴鏃舵椂闂�,濡傛灉瓒呰繃杩欎釜鏃堕棿,浼氭姏鍑哄紓甯革紝鍗曚綅姣 -->
+        <property name="hibernate.c3p0.timeout">30</property>
+        <!-- 鏈�澶х殑PreparedStatement鐨勬暟閲� -->
+        <property name="hibernate.c3p0.max_statements">100</property>
+        <!-- 姣忛殧120绉掓鏌ヨ繛鎺ユ睜閲岀殑绌洪棽杩炴帴 锛屽崟浣嶆槸绉�-->
+        <property name="hibernate.c3p0.idle_test_period">60</property>
+        <!-- 褰撹繛鎺ユ睜閲岄潰鐨勮繛鎺ョ敤瀹岀殑鏃跺�欙紝C3P0涓�涓嬭幏鍙栫殑鏂扮殑杩炴帴鏁� -->
+        <property name="hibernate.c3p0.acquire_increment">5</property>
+        <!-- 姣忔閮介獙璇佽繛鎺ユ槸鍚﹀彲鐢� -->
+        <property name="hibernate.c3p0.validate">true</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- JDBC URL -->
+        <property name="connection.url">jdbc:mysql://202.182.105.243:3306/product</property>
+        <!-- 鏁版嵁搴撶敤鎴峰悕-->
+        <!-- 鏁版嵁搴撳瘑鐮�-->
+        <property name="hibernate.jdbc.batch_size">50
+        </property>
+        <property name="current_session_context_class">thread</property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+        <property name="format_sql">false</property>
+        <mapping class="com.sjw.entity.ColorEntity"/>
+        <mapping class="com.sjw.entity.ListEntity"/>
+        <mapping class="com.sjw.entity.StyleEntity"/>
+        <mapping class="com.sjw.entity.BasicTableEntity"/>
+        <mapping class="com.sjw.entity.DetailsEntity"/>
+        <mapping class="com.sjw.entity.ProductEntity"/>
+    </session-factory>
+
+</hibernate-configuration>
